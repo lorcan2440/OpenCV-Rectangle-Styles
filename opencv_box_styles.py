@@ -149,7 +149,7 @@ def draw_dashdot_rectangle(img: np.ndarray, pt1: tuple, pt2: tuple, color: tuple
 def draw_corner_rectangle(img: np.ndarray, pt1: tuple, pt2: tuple,
         corner_color: tuple, edge_color: tuple, corner_length: int,
         corner_thickness: int = 3, edge_thickness: int = 1,
-        centre_cross: bool = True, lineType=cv2.LINE_8):
+        centre_cross: bool = True, lineType: int = cv2.LINE_8):
     '''
     Draws a rectangle with styled corners and an optional crosshair in the centre.
     
@@ -164,7 +164,7 @@ def draw_corner_rectangle(img: np.ndarray, pt1: tuple, pt2: tuple,
     `corner_thickness` (int, default = 3): thickness of corner detail
     `edge_thickness` (int, default = 1): thickness of edge
     `centre_cross` (bool, default = True): if True, include a edge-like crosshair in the centre
-    `lineType` ([type], default = cv2.LINE_8): cv2 line type, (4, 8 or AA)
+    `lineType` (int, default = cv2.LINE_8): cv2 line type, (4, 8 or AA)
     '''
 
     e_args = [edge_color, edge_thickness, lineType]
